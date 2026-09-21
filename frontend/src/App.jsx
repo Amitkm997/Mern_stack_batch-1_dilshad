@@ -6,7 +6,9 @@ import Home from "./pages/Home"
 import Mouse from "./components/Mouse"
 import Footer from "./pages/Footer"
 import Mobiles from "./components/Mobiles"
-
+import Ac from "./components/Ac"
+import Login from "./components/Login"
+import Register from "./components/Register"
 function App() {
   return(
     <>
@@ -17,6 +19,9 @@ function App() {
          <Route path="/laptop" element={<Laptops/>}/>
          <Route path="/mouse" element={<Mouse/>}/>
          <Route path="/mobile" element={<Mobiles/>}/>
+         <Route path="/ac" element={<Ac/>}></Route>
+         <Route path="/login" element={<Login/>}></Route>
+         <Route path="/register" element={<Register/>}></Route>
       </Routes>
       <Footer/>
       {/* <Laptops/> */}

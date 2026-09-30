@@ -1,4 +1,7 @@
+import ViewDetails from "../pages/ViewDetails";
+import { useNavigate } from "react-router-dom";
 export default function Layout(props) {
+    const navigate=useNavigate()
   return (
     <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
       
@@ -9,13 +12,13 @@ export default function Layout(props) {
 
           <img
             className="w-full h-52 object-contain rounded-lg"
-            src={props.image}
-            alt={props.name}
+            src={props.name.image}
+            alt={props.name.name}
           />
 
           {/* Color */}
           <span className="absolute top-6 right-6 bg-gray-900 text-gray-100 text-xs font-semibold px-3 py-1 rounded-full shadow">
-            {props.color}
+            {props.name.color}
           </span>
 
         </div>
@@ -25,28 +28,29 @@ export default function Layout(props) {
 
           {/* Product Name */}
           <h2 className="text-xl font-bold text-white mb-2">
-            {props.name}
+            {props.name.name}
           </h2>
 
           {/* Description */}
           <p className="text-gray-300 text-sm mb-3">
-            {props.description}
+            {props.name.description}
           </p>
 
           {/* Properties */}
           <p className="text-gray-400 text-sm mb-4">
-            {props.properties}
+            {props.name.properties}
           </p>
 
           {/* Price + Button */}
           <div className="flex items-center justify-between">
 
             <span className="text-xl font-bold text-gray-100">
-              {props.price}
+              {props.name.price}
             </span>
 
-            <button className="bg-gray-200 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-white transition">
-              Buy Now
+            <button className="bg-gray-200 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-white transition"
+              onClick={()=>navigate(`/viewDetails/${props.name}`)}>
+              View Details
             </button>
 
           </div>

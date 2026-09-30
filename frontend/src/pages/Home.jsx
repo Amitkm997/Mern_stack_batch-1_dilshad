@@ -39,7 +39,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-400 min-h-screen">
 
       {/* ================= HERO BANNER ================= */}
       <section className="relative w-full h-[450px] overflow-hidden">

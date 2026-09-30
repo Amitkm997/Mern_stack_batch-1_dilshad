@@ -1,6 +1,6 @@
 import { Routes,Route } from "react-router-dom"
 import Laptops from "./components/Laptops"
-import Navbar from "./pages/Navbar"
+import Navbar from "./pages/Navbar1"
 import Aboutus from "./pages/Aboutus"
 import Home from "./pages/Home"
 import Mouse from "./components/Mouse"
@@ -9,6 +9,7 @@ import Mobiles from "./components/Mobiles"
 import Ac from "./components/Ac"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import ViewDetails from "./pages/ViewDetails"
 function App() {
   return(
     <>
@@ -22,6 +23,7 @@ function App() {
          <Route path="/ac" element={<Ac/>}></Route>
          <Route path="/login" element={<Login/>}></Route>
          <Route path="/register" element={<Register/>}></Route>
+         <Route path="/viewDetails/:id" element={<ViewDetails/>}/>
       </Routes>
       <Footer/>
       {/* <Laptops/> */}

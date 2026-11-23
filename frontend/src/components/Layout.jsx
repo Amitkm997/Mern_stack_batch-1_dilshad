@@ -1,6 +1,6 @@
-import ViewDetails from "../pages/ViewDetails";
 import { useNavigate } from "react-router-dom";
 export default function Layout(props) {
+  const{name}=props.name
     const navigate=useNavigate()
   return (
     <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
@@ -49,7 +49,7 @@ export default function Layout(props) {
             </span>
 
             <button className="bg-gray-200 text-gray-900 px-4 py-2 rounded-lg font-semibold hover:bg-white transition"
-              onClick={()=>navigate(`/viewDetails/${props.name}`)}>
+              onClick={()=>navigate(`/viewDetails/${props.name.id}`)}>
               View Details
             </button>
 
